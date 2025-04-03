@@ -1,5 +1,7 @@
 @import "./App.css";
 
+/* STYLES FOR THE HEADER COMPONENT */
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -63,6 +65,58 @@ nav .right button {
   color: white;
   transform: scale(1.02);
 }
+/* RESPONSIVE STYLES FOR THE  HEADER COMPONENT */
+@media (min-width: 768px) {
+  .mobile-right {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  nav .right {
+    display: none;
+  }
+  .mobile-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-right: 60px;
+    position: relative;
+  }
+  .menu-items {
+    position: absolute;
+    top: 34px;
+    background-color: var(--primary-color);
+    width: 80px;
+    flex-direction: column;
+    gap: 10px;
+    padding: 4px 10px 20px 10px;
+    border-radius: 10px;
+    display: none;
+  }
+  .menu-items div {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .menu-items div:hover {
+    border-bottom: 1px solid white;
+    transform: scale(1.04);
+  }
+  .mobile-right:hover {
+    background-color: #2109fc1e;
+  }
+  .mobile-right:hover .menu-items {
+    display: flex;
+  }
+  .mobile-right img {
+    width: 25px;
+    height: 25px;
+  }
+}
+/* STYLES FOR THE HERO SECTION */
 .hero-section {
   padding-top: 75px;
   display: flex;
@@ -99,7 +153,65 @@ nav .right button {
   transition: 0.35s ease-in-out background-color, 0.35s ease-in-out color;
   cursor: pointer;
 }
-
+/* STYLES FOR RESPONSIVENESS IN THE HERO SECTION PAGE */
+@media (min-width: 768px) {
+  .hero-section-mobile {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .hero-section {
+    display: none;
+  }
+  .hero-section-mobile,
+  .hero-section-mobile .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 92%;
+    margin: auto;
+    padding-top: 23px;
+  }
+  .hero-section-mobile .top h1 {
+    font-family: "Inknut Antiqua";
+    font-size: 30px;
+    line-height: 1.2;
+    width: 98%;
+    margin-bottom: 2px;
+    text-align: center;
+  }
+  .hero-section-mobile .top img {
+    width: 580px;
+    border-radius: 12px;
+  }
+  .hero-section-mobile button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    transition: 0.35s ease-in-out background-color, 0.35s ease-in-out color;
+    cursor: pointer;
+  }
+  .hero-section-mobile .top p {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+@media (max-width: 618px) {
+  .hero-section-mobile .top img {
+    width: 480px;
+  }
+}
+@media (max-width: 520px) {
+  .hero-section-mobile .top img {
+    width: 390px;
+  }
+}@media (max-width: 410px) {
+  .hero-section-mobile .top img {
+    width: 290px;
+  }
+}
 /* STYLES FOR THE PROJECTS SECTION */
 
 .projects-section {
@@ -192,6 +304,28 @@ nav .right button {
 .project-container button img {
   width: 22px;
   height: 18px;
+}
+/* RESPONSIVENESS STYLES FOR THE PROJECTS SECTION */
+
+@media (max-width: 768px) {
+  .project-container {
+    width: 80vw;
+  }
+  .project-container .left img {
+    width: 180px;
+    border-radius: 10px;
+  }
+  .project-container .right p {
+    margin: 5px;
+  }
+  .project-container .right h3 {
+    font-size: 15px;
+    margin: 5px;
+  }
+  .project-container button {
+    left: 28px;
+    width: 40%;
+  }
 }
 
 /* EDU SECTION STYLES */
@@ -288,7 +422,7 @@ nav .right button {
 
   .testimonial {
     min-width: 100%;
-   
+
     background-color: var(--accent-color);
     border-radius: 10px;
     box-shadow: 1px 2px 4px #2109fc6a;
@@ -346,4 +480,18 @@ footer .right p {
 footer .right span {
   font-size: 12px;
   font-weight: 200;
+}
+/* RESPONSIVENESS STYLES FOR THE FOOTER COMPONENT */
+
+@media (max-width: 768px) {
+  footer,
+  footer .left,
+  .footer .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2px;
+  }
 }
