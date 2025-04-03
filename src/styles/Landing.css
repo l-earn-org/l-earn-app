@@ -1,0 +1,349 @@
+@import "./App.css";
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  backdrop-filter: blur(80px);
+  z-index: 3;
+  border-bottom: 1.2px solid black;
+}
+nav .left {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-left: 70px;
+  font-family: "Inknut Antiqua";
+}
+nav .right {
+  display: flex;
+  gap: 10px;
+  margin-right: 70px;
+}
+.logo {
+  background-color: var(--primary-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .right button {
+  padding: 5px 20px;
+  border-radius: 10px;
+  transition: 0.25s ease-in-out background-color, 0.25s ease-in-out color;
+  cursor: pointer;
+}
+.login-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+.signup-button {
+  background-color: transparent;
+  border: 1.5px solid #2209fc;
+  color: var(--primary-color);
+}
+.login-button:hover,
+.hero-section .left button:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1.5px solid #2209fc;
+  transform: scale(1.02);
+}
+.signup-button:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: scale(1.02);
+}
+.hero-section {
+  padding-top: 75px;
+  display: flex;
+  justify-content: space-between;
+  width: 92%;
+  margin: auto;
+}
+.hero-section .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-section .right img {
+  width: 480px;
+  border-radius: 12px;
+}
+.hero-section .left h1 {
+  font-family: "Inknut Antiqua";
+  font-size: 36px;
+  line-height: 1.2;
+  width: 80%;
+  margin-bottom: 2px;
+}
+.hero-section .left p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.hero-section .left button {
+  width: 25%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  transition: 0.35s ease-in-out background-color, 0.35s ease-in-out color;
+  cursor: pointer;
+}
+
+/* STYLES FOR THE PROJECTS SECTION */
+
+.projects-section {
+  background-color: var(--accent-color);
+  width: 100%;
+  height: 110%;
+  padding-bottom: 20px;
+}
+.projects-section h1 {
+  font-family: "Inknut Antiqua";
+  text-align: center;
+}
+.project-container {
+  display: flex;
+  position: relative;
+  width: 50vw;
+  margin: auto;
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.project-container .left {
+  width: 60%;
+}
+.project-container .right {
+  width: 40%;
+  background-color: #fffee8;
+  padding: 10px;
+}
+.project-container .left img {
+  width: 360px;
+  border-radius: 10px;
+}
+.project-container .left p {
+  margin-bottom: 8px;
+  width: 95%;
+}
+.project-container .left span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+.project-container h2 {
+  font-size: 13px;
+}
+.project-container h2 ul,
+.project-container h2 ol {
+  padding-left: 20px;
+  margin: 0;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.project-container .left div {
+  background-color: #2209fc;
+  color: white;
+  width: 60%;
+  padding: 2px 12px;
+  border-radius: 2px 10px;
+  margin: auto;
+  margin-top: 10px;
+  margin-left: 8px;
+}
+.project-container .right p {
+  font-size: 12px;
+  font-weight: 600;
+}
+.project-container .right span {
+  font-weight: 300;
+}
+.project-container button {
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: absolute;
+  bottom: 38px;
+  right: 28px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 500;
+  padding: 5px 8px;
+}
+.project-container button:hover {
+  background-color: #2109fc6a;
+  color: black;
+  border: 2px solid #2209fc;
+}
+.project-container button img {
+  width: 22px;
+  height: 18px;
+}
+
+/* EDU SECTION STYLES */
+
+.edu-section {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+.edu-section div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.edu-section div img {
+  width: 50px;
+}
+.edu-section div p {
+  font-family: Arial, Helvetica, sans-serif;
+  word-spacing: -2px;
+  text-align: center;
+  width: 60%;
+}
+
+/* STYLES FOR THE TESTIMONIALS SECTION */
+.testimonials {
+  border-top: 1px solid black;
+  margin-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+.testimonials h1 {
+  font-family: "Inknut Antiqua";
+  text-align: center;
+}
+.testimonials-grid {
+  display: flex;
+  width: 90vw;
+  margin: auto;
+  justify-content: center;
+  gap: 18px;
+}
+.testimonial {
+  width: 25%;
+  padding: 20px 10px;
+  border-radius: 20px;
+  background-color: var(--accent-color);
+  height: 240px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 1px 2px 4px #2109fc6a;
+}
+.testimonial div {
+  background-color: var(--primary-color);
+  width: 90%;
+  margin: auto;
+  display: flex;
+  color: white;
+  gap: 30px;
+  border-radius: 30px;
+  box-shadow: 1px 2px 4px #2109fc6a;
+}
+.testimonial div img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+@media (min-width: 768px) {
+  .mobile-slider-container {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .testimonials-grid {
+    display: none;
+  }
+
+  .mobile-testimonials {
+    text-align: center;
+  }
+
+  .mobile-slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+
+  .mobile-testimonials-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .testimonial {
+    min-width: 100%;
+   
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px #2109fc6a;
+  }
+
+  .testimonial img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .nav-button {
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 50%;
+    z-index: 3;
+  }
+
+  .nav-button.left {
+    left: 10px;
+  }
+
+  .nav-button.right {
+    right: 10px;
+  }
+}
+
+/* STYLES FOR THE FOOTER */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--accent-color);
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 30px;
+}
+footer div {
+  margin: 10px 20px;
+}
+footer .logo {
+  font-family: "Inknut Antiqua";
+}
+footer .right p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+footer .right span {
+  font-size: 12px;
+  font-weight: 200;
+}

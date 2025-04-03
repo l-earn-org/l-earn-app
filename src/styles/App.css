@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+:root {
+  --primary-color: #2209fc;
+  --accent-color: #e5effe;
+}
+body{
+  /* width: 96%;
+  margin: auto; */
+}
+
+.temporary-page {
+  width: 98vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.temporary-page button {
+  background-color: transparent;
+  border: 1.5px solid #2209fc;
+  color: var(--primary-color);
+  padding: 10px 15px;
+  border-radius: 12px;
+  transition: 0.2s ease-in-out color, 0.2s ease-in-out background-color;
+}
+.temporary-page button:hover {
+  color: white;
+  background-color: #ffe5e5;
+}
