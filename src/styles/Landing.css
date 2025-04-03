@@ -207,9 +207,10 @@ nav .right button {
   .hero-section-mobile .top img {
     width: 390px;
   }
-}@media (max-width: 410px) {
+}
+@media (max-width: 410px) {
   .hero-section-mobile .top img {
-    width: 290px;
+    width: 390px;
   }
 }
 /* STYLES FOR THE PROJECTS SECTION */
@@ -217,114 +218,37 @@ nav .right button {
 .projects-section {
   background-color: var(--accent-color);
   width: 100%;
-  height: 110%;
   padding-bottom: 20px;
 }
 .projects-section h1 {
   font-family: "Inknut Antiqua";
   text-align: center;
+  line-height: 1.2;
 }
 .project-container {
   display: flex;
-  position: relative;
+  justify-content: center;
   width: 50vw;
   margin: auto;
-  background-color: white;
-  border-radius: 15px;
-  padding: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.project-container .left {
-  width: 60%;
-}
-.project-container .right {
-  width: 40%;
-  background-color: #fffee8;
-  padding: 10px;
-}
-.project-container .left img {
-  width: 360px;
-  border-radius: 10px;
-}
-.project-container .left p {
-  margin-bottom: 8px;
-  width: 95%;
-}
-.project-container .left span {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 600;
-}
-.project-container h2 {
-  font-size: 13px;
-}
-.project-container h2 ul,
-.project-container h2 ol {
-  padding-left: 20px;
-  margin: 0;
-  font-weight: 300;
-  font-size: 12px;
 }
 
-.project-container .left div {
-  background-color: #2209fc;
-  color: white;
-  width: 60%;
-  padding: 2px 12px;
-  border-radius: 2px 10px;
-  margin: auto;
-  margin-top: 10px;
-  margin-left: 8px;
+.project-container img {
+  width: 560px;
+  border-radius: 10px;
 }
-.project-container .right p {
-  font-size: 12px;
-  font-weight: 600;
-}
-.project-container .right span {
-  font-weight: 300;
-}
-.project-container button {
-  background-color: var(--primary-color);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  position: absolute;
-  bottom: 38px;
-  right: 28px;
-  border: none;
-  border-radius: 12px;
-  color: white;
-  font-weight: 500;
-  padding: 5px 8px;
-}
-.project-container button:hover {
-  background-color: #2109fc6a;
-  color: black;
-  border: 2px solid #2209fc;
-}
-.project-container button img {
-  width: 22px;
-  height: 18px;
-}
+
 /* RESPONSIVENESS STYLES FOR THE PROJECTS SECTION */
 
 @media (max-width: 768px) {
   .project-container {
     width: 80vw;
   }
-  .project-container .left img {
-    width: 180px;
-    border-radius: 10px;
+  .project-container img {
+    width: 460px;
   }
-  .project-container .right p {
-    margin: 5px;
-  }
-  .project-container .right h3 {
-    font-size: 15px;
-    margin: 5px;
-  }
-  .project-container button {
-    left: 28px;
-    width: 40%;
+}@media (max-width: 508px) {
+  .project-container img {
+    width: 380px;
   }
 }
 
@@ -373,7 +297,7 @@ nav .right button {
   padding: 20px 10px;
   border-radius: 20px;
   background-color: var(--accent-color);
-  height: 240px;
+  height: 140px;
   font-family: Arial, Helvetica, sans-serif;
   box-shadow: 1px 2px 4px #2109fc6a;
 }
@@ -393,7 +317,7 @@ nav .right button {
   border-radius: 50%;
 }
 @media (min-width: 768px) {
-  .mobile-slider-container {
+  .top-level-slider-container {
     display: none;
   }
 }
@@ -413,6 +337,9 @@ nav .right button {
     margin: auto;
     overflow: hidden;
     margin-bottom: 50px;
+  }
+  .top-level-slider-container {
+    position: relative;
   }
 
   .mobile-testimonials-slider {
@@ -438,14 +365,19 @@ nav .right button {
     position: absolute;
     top: 70%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--primary-color);
     color: white;
     border: none;
     cursor: pointer;
     padding: 10px;
     font-size: 18px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
-    z-index: 3;
+    z-index: 30;
   }
 
   .nav-button.left {

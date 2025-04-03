@@ -56,31 +56,33 @@ export const Testimonial = () => {
       </div>
 
       {/*  MOBILE VIEW  */}
+      <div className="top-level-slider-container">
+          <button onClick={prevSlide} className="nav-button left">
+            &lt;
+          </button>
+        <div className="mobile-slider-container">
 
-      <div className="mobile-slider-container">
-        <button onClick={prevSlide} className="nav-button left">
-          &lt;
-        </button>
-
-        <div className="mobile-testimonials-slider">
-          {testimonials.map((item, i) => (
-            <div
-              key={i}
-              className="testimonial"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-            >
-              <div className="mobile-testimonial-header">
-                <img src={item.userImg} alt={item.username} />
-                <p>{item.username}</p>
+          <div className="mobile-testimonials-slider">
+            {testimonials.map((item, i) => (
+              <div
+                key={i}
+                className="testimonial"
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              >
+                <div className="mobile-testimonial-header">
+                  <img src={item.userImg} alt={item.username} />
+                  <p>{item.username}</p>
+                </div>
+                <p>{item.text}</p>
               </div>
-              <p>{item.text}</p>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
+       
+        </div>
         <button onClick={nextSlide} className="nav-button right">
-          &gt;
-        </button>
+            &gt;
+          </button>
       </div>
     </>
   );
