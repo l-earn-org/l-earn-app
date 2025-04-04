@@ -28,7 +28,7 @@
   font-family: "Inknut Antiqua";
 }
 .home-nav .right {
-  margin: 0px 60px;
+  margin: 0px 72px;
   display: flex;
   gap: 22px;
   align-items: center;
@@ -36,7 +36,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 .home-nav .right p {
-  transition: 0.4s ease color, .6s ease transform;
+  transition: 0.4s ease color, 0.6s ease transform;
   cursor: pointer;
 }
 .home-nav .right p:hover {
@@ -45,52 +45,129 @@
 }
 /* RESPONSIVE STYLES FOR THE  HEADER COMPONENT */
 @media (min-width: 768px) {
-    .mobile-right {
-      display: none;
-    }
+  .mobile-right {
+    display: none;
   }
-  @media (max-width: 768px) {
-    .home-nav .right {
-      display: none;
-    }
-    .mobile-right {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 35px;
-      height: 35px;
-      cursor: pointer;
-      border-radius: 50%;
-      margin-right: 60px;
-      position: relative;
-    }
-    .menu-items {
-      position: absolute;
-      top: 34px;
-      background-color: var(--primary-color);
-      width: 80px;
-      flex-direction: column;
-      gap: 10px;
-      padding: 4px 10px 20px 10px;
-      border-radius: 10px;
-      display: none;
-    }
-    .menu-items div {
-      color: white;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    .menu-items div:hover {
-      border-bottom: 1px solid white;
-      transform: scale(1.04);
-    }
-    .mobile-right:hover {
-      background-color: #2109fc1e;
-    }
-    .mobile-right:hover .menu-items {
-      display: flex;
-    }
-    .mobile-right img {
-      width: 25px;
-      height: 25px;
-    }
+}
+@media (max-width: 768px) {
+  .home-nav .right {
+    display: none;
   }
+  .mobile-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-right: 60px;
+    position: relative;
+  }
+  .menu-items {
+    position: absolute;
+    top: 34px;
+    background-color: var(--primary-color);
+    width: 80px;
+    flex-direction: column;
+    gap: 10px;
+    padding: 4px 10px 20px 10px;
+    border-radius: 10px;
+    display: none;
+  }
+  .menu-items div {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .menu-items div:hover {
+    border-bottom: 1px solid white;
+    transform: scale(1.04);
+  }
+  .mobile-right:hover {
+    background-color: #2109fc1e;
+  }
+  .mobile-right:hover .menu-items {
+    display: flex;
+  }
+  .mobile-right img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* STYLES FOR THE USER PROJECTS SECTION */
+
+.user-projects-container {
+  display: flex;
+  /* align-items: center; */
+  font-family: "Inknut Antiqua";
+  width: 93%;
+  margin: auto;
+  padding-top: 72px;
+}
+.user-projects-container .left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-right: 28vw;
+  width: 80%;
+}
+.user-projects-container .left img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.user-projects-container .left h2 {
+  margin: 4px;
+}
+.user-projects-container .right {
+  display: flex;
+  width: 100%;
+}
+.done-container,
+.current-container {
+  width: 52%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 8px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.107);
+  border-radius: 20px;
+}
+.done-container {
+  background-color: var(--primary-color);
+  color: white;
+  margin-right: 6em;
+}
+.current-container {
+  background-color: var(--accent-color);
+  color: #080149;
+}
+.user-projects-container h3,
+.user-projects-container h4 {
+  margin: 3px;
+}
+.user-projects-container h3 {
+  font-size: 28px;
+}
+.user-projects-container h4 {
+  font-size: 15px;
+}
+
+/* RESPONSIVENESS STYLES FOR THE USER PROJECTS SECTION */
+
+@media (max-width: 820px) {
+  .user-projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: center;
+  }
+  .user-projects-container .left {
+    display: flex;
+    flex-direction: row;
+   justify-content: space-between;
+    width: 100%;
+  }
+}

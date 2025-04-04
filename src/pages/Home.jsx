@@ -1,13 +1,14 @@
 import "../styles/Home.css";
-import {HomeNav} from '../components/HomeNav.jsx'
+import { HomeNav } from "../components/HomeNav.jsx";
+import { UserProjects} from "../components/UserProjects.jsx";
 // import { projects } from '../data/projects';
 
 export const Home = () => {
   return (
     <>
       <HomeNav />
-      {/* <UserProjects />
-      <Hackathons /> */}
+      <UserProjects />
+      {/* <Hackathons /> */}
     </>
   );
 };
