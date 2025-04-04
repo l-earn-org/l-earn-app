@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  --primary-color: #2209fc;
+  --accent-color: #e5effe;
+}
+
+/* STYLES FOR THE HEADER IN THE HOME PAGE */
+
+.home-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  backdrop-filter: blur(80px);
+  z-index: 2;
+  border-bottom: 1.2px solid black;
+}
+.home-nav .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 50px;
+  gap: 20px;
+  font-family: "Inknut Antiqua";
+}
+.home-nav .right {
+  margin: 0px 60px;
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.home-nav .right p {
+  transition: 0.4s ease color, .6s ease transform;
+  cursor: pointer;
+}
+.home-nav .right p:hover {
+  color: var(--primary-color);
+  transform: scale(1.08);
+}
+/* RESPONSIVE STYLES FOR THE  HEADER COMPONENT */
+@media (min-width: 768px) {
+    .mobile-right {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    .home-nav .right {
+      display: none;
+    }
+    .mobile-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      border-radius: 50%;
+      margin-right: 60px;
+      position: relative;
+    }
+    .menu-items {
+      position: absolute;
+      top: 34px;
+      background-color: var(--primary-color);
+      width: 80px;
+      flex-direction: column;
+      gap: 10px;
+      padding: 4px 10px 20px 10px;
+      border-radius: 10px;
+      display: none;
+    }
+    .menu-items div {
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .menu-items div:hover {
+      border-bottom: 1px solid white;
+      transform: scale(1.04);
+    }
+    .mobile-right:hover {
+      background-color: #2109fc1e;
+    }
+    .mobile-right:hover .menu-items {
+      display: flex;
+    }
+    .mobile-right img {
+      width: 25px;
+      height: 25px;
+    }
+  }
