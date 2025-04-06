@@ -176,6 +176,15 @@
     display: flex;
     width: 100%;
   }
+
+  .done-container,
+  .current-container {
+    width: 78%;
+    text-align: center;
+  }
+  .done-container {
+    margin-right: 5em;
+  }
 }
 /* STYLES FOR THE HACKATHONS CONTAINER */
 
@@ -298,11 +307,19 @@
     gap: 10px;
   }
   .hackathon-banner {
-    width: 160px;
+    width: 120px;
     margin-left: 1em;
   }
   .date-container {
     width: 30%;
+  }
+  .hackathon-container {
+
+    padding: .4em 0px .4em 0px;
+   
+  }
+  .hackathon-container h3 {
+    margin-top: 0px;
   }
 }
 @media (max-width: 560px) {
