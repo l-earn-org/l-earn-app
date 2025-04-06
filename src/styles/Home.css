@@ -157,6 +157,16 @@
 
 /* RESPONSIVENESS STYLES FOR THE USER PROJECTS SECTION */
 
+@media (max-width: 1030px) {
+  .done-container,
+  .current-container {
+    width: 80%;
+  }
+  .user-projects-container .right {
+    display: flex;
+    width: 280%;
+  }
+}
 @media (max-width: 820px) {
   .user-projects-container {
     display: flex;
@@ -170,8 +180,6 @@
     justify-content: space-between;
     width: 100%;
   }
-}
-@media (max-width: 820px) {
   .user-projects-container .right {
     display: flex;
     width: 100%;
@@ -275,13 +283,29 @@
 
 @media (max-width: 1040px) {
   .projects-grid {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .date-container {
-    width: 75%;
+    width: 42%;
   }
   .hackathon-banner {
-    width: 220px;
+    width: 430px;
+  }
+}
+@media (max-width: 990px) {
+  .hackathon-banner {
+    width: 400px;
+  }
+  .date-container {
+    width: 45%;
+  }
+}
+@media (max-width: 950px) {
+  .hackathon-banner {
+    width: 360px;
+  }
+  .date-container {
+    width: 45%;
   }
 }
 @media (max-width: 820px) {
@@ -314,12 +338,15 @@
     width: 30%;
   }
   .hackathon-container {
-
-    padding: .4em 0px .4em 0px;
-   
+    padding: 0.4em 0px 0.4em 0px;
   }
   .hackathon-container h3 {
     margin-top: 0px;
+  }
+}
+@media (max-width: 635px) {
+  .date-container {
+    width: 39%;
   }
 }
 @media (max-width: 560px) {
